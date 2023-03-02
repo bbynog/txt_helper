@@ -9,7 +9,7 @@ import { WRITE_PATH_DIR } from './config/config';
 const askForFileName = async () => {
   const rl = readline.createInterface({ input, output });
   const fileName = await rl.question(
-    'What will be the txt file name? (default: auto generate name) '
+    'What will be the txt file name? (<ENTER>: auto generate name) '
   );
   rl.close();
 
