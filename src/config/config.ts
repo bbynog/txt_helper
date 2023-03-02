@@ -1,1 +1,1 @@
-export const WRITE_PATH_DIR = `${process.cwd()}/src/txt_cache`;
+export const WRITE_PATH_DIR = `./src/txt_cache`;
