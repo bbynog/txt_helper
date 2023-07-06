@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon --watch 'src/' --exec 'ts-node src/app.ts' -e ts",
     "build": "npx tsc --build . --verbose",
-    "start": "node ./dist/app.js"
+    "start": "pnpm ts-node ./src/app.ts"
   },
   "author": "",
   "license": "ISC",
