@@ -1,15 +1,24 @@
-import { stdin as input, stdout as output } from 'node:process';
-import * as readline from 'node:readline/promises';
+import { statSync } from 'node:fs';
 import DEFAULT_OUTPUT_PATH_DIR from '../constants/DEFAULT_OUTPUT_PATH_DIR';
+import { input } from '@inquirer/prompts';
 
 const askForOutputDir = async () => {
-  const rl = readline.createInterface({ input, output });
-  const dirToWrite = await rl.question(
-    `What will be the directory to write? (<ENTER>: will write file on default dir: ${DEFAULT_OUTPUT_PATH_DIR}) `
-  );
-  rl.close();
+  const outputDir = await input({
+    default: DEFAULT_OUTPUT_PATH_DIR,
+    message: 'Where do you want to save the txt file?',
+    validate: (outputDirInput) => {
+      try {
+        if (statSync(outputDirInput).isDirectory()) {
+          return true;
+        }
+      } catch (error) {
+        return 'This is not a valid directory! Please choose a valid one...';
+      }
+      return 'This is not a valid directory! Please choose a valid one...';
+    }
+  });
 
-  return `${dirToWrite}`;
+  return `${outputDir}`;
 };
 
 export default askForOutputDir;

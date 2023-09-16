@@ -1,6 +1,6 @@
-const checkForDuplicateName = async (
-  txtFilesOnWriteDir: string[],
-  fileName: string
+const checkForDuplicateName = (
+  fileName: string,
+  txtFilesOnWriteDir: string[]
 ) => {
   let someFileHasTheName = false;
 
