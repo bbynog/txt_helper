@@ -7,5 +7,6 @@ module.exports = {
   quoteProps: 'consistent',
   trailingComma: 'none',
   bracketSpacing: true,
-  arrowParens: 'always'
+  arrowParens: 'always',
+  importExtensions: ['.js', '.jsx', '.ts', '.tsx']
 };

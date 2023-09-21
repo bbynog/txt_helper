@@ -1,0 +1,3 @@
+const DEFAULT_OUTPUT_RELATIVE_PATH_DIR = `./src/txt`;
+
+export default DEFAULT_OUTPUT_RELATIVE_PATH_DIR;
