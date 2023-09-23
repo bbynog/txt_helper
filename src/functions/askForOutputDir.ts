@@ -1,5 +1,5 @@
 import { statSync } from 'node:fs';
-import DEFAULT_OUTPUT_PATH_DIR from '../constants/DEFAULT_OUTPUT_RELATIVE_PATH_DIR';
+import DEFAULT_OUTPUT_PATH_DIR from '../constants/DEFAULT_OUTPUT_DIR_PATH';
 import { input } from '@inquirer/prompts';
 
 const askForOutputDir = async () => {

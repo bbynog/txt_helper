@@ -1,0 +1,3 @@
+const DEFAULT_OUTPUT_DIR_PATH = '';
+
+export default DEFAULT_OUTPUT_DIR_PATH;
