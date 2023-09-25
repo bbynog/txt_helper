@@ -3,7 +3,7 @@
 import { writeFile } from 'node:fs/promises';
 import { exit } from 'process';
 import askForFileName from './functions/askForFileName';
-import autoGenerateFileName from './functions/generateFileName';
+import autoGenerateFileName from './functions/autoGenerateFileName';
 import generateTxtData from './functions/generateTxtData';
 import askForOutputDir from './functions/askForOutputDir';
 import getTxtFilesFromDir from './functions/getTxtFilesFromDir';
